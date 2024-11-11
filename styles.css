@@ -70,6 +70,24 @@ aside ul li a:hover {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #34495e; /* Match background color */
+    color: #ecf0f1; /* Match text color */
+    z-index: 1000;
+    padding-top: 3.5rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+
   aside.active {
     display: block;
   }
@@ -198,59 +216,4 @@ main {
 
 .w3-code span {
   color: #d63384;
-}
-
-/* Responsive Sidebar and Hamburger Menu */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  aside {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100vh;
-    background-color: #f0f4f8;
-    z-index: 1000;
-    padding-top: 3.5rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  }
-
-  aside.active {
-    display: block;
-  }
-
-  #hamburger-menu {
-    display: block;
-  }
-
-  main {
-    padding: 1.5rem;
-  }
-
-  header {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  header nav a {
-    font-size: 0.9rem;
-  }
-
-  aside a {
-    font-size: 0.9rem;
-  }
-
-  .w3-code {
-    font-size: 0.9rem;
-  }
 }
